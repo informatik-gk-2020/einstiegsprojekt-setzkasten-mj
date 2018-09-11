@@ -29,37 +29,6 @@ public class Setzkasten {
     }
 
     private void drawObject(int x, int y) {
-        int obj = Hilfe.zufall(0, 2);
-
-        switch (obj) {
-            case 0:
-                drawTannenbaum(x, y);
-                break;
-            case 1:
-                drawStern(x, y);
-                break;
-            case 2:
-                drawKreisMitStrichenGekreuzt(x, y);
-                break;
-        }
-    }
-
-    private void drawTannenbaum(int x, int y) {
-        int center = cellSize / 2;
-        stift.kreis(x + center, y + center, cellSize / 4);
-    }
-
-    private void drawStern(int x, int y) {
-        int center = cellSize / 2;
-
-        stift.bewegeBis(x + center, y + center);
-        for (int i = 0; i < 6; i++) {
-
-        }
-    }
-
-    private void drawKreisMitStrichenGekreuzt(int x, int y) {
-        int center = cellSize / 2;
-        stift.kreis(x + center, y + center, cellSize / 3);
+        SetzkastenShape.getRandomShape().draw(stift, x, y, cellSize);
     }
 }
