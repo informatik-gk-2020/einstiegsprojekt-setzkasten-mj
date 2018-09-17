@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Main" type="Application" factoryName="Application">
+  <configuration default="false" name="Main" type="Application" factoryName="Application" singleton="true">
     <option name="MAIN_CLASS_NAME" value="Main" />
     <module name="Setzkasten" />
     <RunnerSettings RunnerId="Run" />
